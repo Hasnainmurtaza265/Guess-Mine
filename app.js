@@ -1,34 +1,72 @@
 var demo = document.getElementById("demo");
-// demo = demo.innerHTML;
 
-// console.log(userInput);
 var userInput = document.getElementById("userInput")
 
-// JS number Generator
-var botNum = Math.floor(Math.random() * 10 + 1);
 
-// console.log(botNum);
+// var botNum = Math.floor(Math.random() * 10 + 1);
+let botNum;
+
+function numGenerator() {
+    botNum = Math.floor(Math.random() * 10 + 1);
+
+}
+
+numGenerator();
+
+let highScore = document.getElementById("highScore");
+score = +highScore.innerText;
 
 
-function user() {
+let currentScore = document.getElementById("currentScore")
+current = currentScore.innerText;
+// console.log(current);
+
+
+
+let userAttempts = document.getElementById("attempts")
+attempts = userAttempts.innerText;
+
+
+console.log(botNum);
+// console.log(botNum2);
+
+
+
+function checkGuess() {
     var userValue = userInput.value;
-    // userInput = +userInput.value;
-    // console.log(userValue);
-
-
-    // while (userValue.length <= 0) {  }
 
     if (userValue < 1 || userValue > 10) {
         alert("Please enter a number between 1 and 10");
     }
     else {
-        demo.innerHTML = botNum;
+        attempts--;
+        userAttempts.innerHTML = attempts
+        // demo.innerHTML = botNum;
+
+
         if (userValue == botNum) {
-            alert("you win");
             demo.innerHTML = botNum;
+            alert("you win");
+            numGenerator()
+            console.log(botNum);
+
+
+            current++;
+            currentScore.innerHTML = current;
+            // numGenerator()
+            if (current > score) {
+                score++;
+                highScore.innerHTML = score
+            }
+
+
+
         } else {
 
             alert("try again")
+
+            current--;
+            currentScore.innerHTML = current
         }
 
 
@@ -37,16 +75,27 @@ function user() {
     }
 
 }
-// var user_input = document.getElementById("user_input");
 
-// var js_number = Math.floor(Math.random()*10+1);
+function playagain() {
 
-// function random_num(){
+    // botNum = botNum2
+    // var botNum2 = Math.floor(Math.random() * 10 + 1);
+    // demo.innerHTML = "";
+    // userInput.value = "";
 
-// }
+    // console.log(botNum2);
+    // botNum2
+    numGenerator();
+    console.log(botNum);
 
-// function user() {
-//     user_input = user_input.value;
+    current = 0;
+    currentScore.innerHTML = current;
 
-// }
+    attempts = 10;
+    userAttempts.innerHTML = attempts;
+
+}
+
+
+
 

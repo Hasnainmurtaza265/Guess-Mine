@@ -18,9 +18,9 @@
                 <p>Try to guess the number between 1 and 10</p>
             </div>
             <div class="child_div demo_div">
-                <h1>DEMO</h1>
+                <h1>BOT Guess</h1>
                 <div class="demo_child">
-                    <h2>Target :</h2>
+                    <h2>Guess :</h2>
                     <h2 id="demo"></h2>
                 </div>
             </div>
@@ -28,8 +28,8 @@
                 <input type="number" name="" id="userInput" placeholder="Enter your guess">
             </div>
             <div class="child_div check_div">
-                <button class="check_guess" onclick="user()">Check Guess</button>
-                <button class="play_again">Play Again</button>
+                <button class="check_guess" onclick="checkGuess()">Check Guess</button>
+                <button class="play_again" onclick="playagain()">Play Again</button>
             </div>
             <div class="child_div accuracy_div">
                 <h1 class="correct">Correct Guess</h1>
@@ -37,15 +37,15 @@
             <div class="child_div scores_div">
                 <div class="score_child score_child_1">
                     <h3>Current Score</h3>
-                    <h2>0</h2>
+                    <h2 id="currentScore">0</h2>
                 </div>
                 <div class="score_child score_child_2">
                     <h3>High Score</h3>
-                    <h2>0</h2>
+                    <h2 id="highScore">0</h2>
                 </div>
                 <div class="score_child score_child_3">
                     <h3>Remaining Attempts</h3>
-                    <h2>0</h2>
+                    <h2 id="attempts">10</h2>
                 </div>
             </div>
         </div>
