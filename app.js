@@ -3,7 +3,6 @@ var demo = document.getElementById("demo");
 var userInput = document.getElementById("userInput")
 
 
-// var botNum = Math.floor(Math.random() * 10 + 1);
 let botNum;
 
 function numGenerator() {
@@ -78,13 +77,7 @@ function checkGuess() {
 
 function playagain() {
 
-    // botNum = botNum2
-    // var botNum2 = Math.floor(Math.random() * 10 + 1);
-    // demo.innerHTML = "";
-    // userInput.value = "";
-
-    // console.log(botNum2);
-    // botNum2
+    
     numGenerator();
     console.log(botNum);
 

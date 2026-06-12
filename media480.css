@@ -1,0 +1,41 @@
+@media (max-width: 480px) {
+
+    .main_div2 {
+        width: 95%;
+        gap: 15px;
+    }
+
+    .head_div>h1 {
+        font-size: 20px;
+    }
+
+    .head_div>p {
+        font-size: 12px;
+    }
+
+    .check_div {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .check_div>button {
+        width: 100%;
+        height: 45px;
+    }
+
+    .scores_div {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .score_child {
+        border-left: none !important;
+        border-top: 1px solid #333;
+        padding: 10px 0;
+    }
+
+    .score_child_1 {
+        border-top: none;
+    }
+}

@@ -234,9 +234,7 @@ input::-webkit-inner-spin-button {
     color: white;
 }
 
-.score_child_1 {
-    /* border-: 2px solid yellow; */
-}
+
 
 .score_child_2 {
     border-left: 2px solid black;
@@ -250,3 +248,4 @@ input::-webkit-inner-spin-button {
 .score_child>h3 {
     font-size: 12px;
 }
+

@@ -1,0 +1,37 @@
+@media (max-width: 768px) {
+
+    body {
+        /* min-height: 100dvh; */
+        padding-top: 20px;
+        display: flex;
+        /* justify-content: flex-start; */
+        align-items: flex-start;
+    }
+
+    .main_div {
+        width: 100%;
+        padding: 10px;
+        height: auto;
+
+    }
+
+    .main_div2 {
+        width: 95%;
+        /* height: auto; */
+        height: auto;
+        /* padding: 20px; */
+        margin-top: 10px;
+    }
+
+    .head_div,
+    .input_div,
+    .check_div,
+    .accuracy_div,
+    .scores_div {
+        width: 100%;
+    }
+
+    .demo_div {
+        width: 150px;
+    }
+}
