@@ -18,7 +18,7 @@ body {
 
 
 .main_div {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 800px;
     height: 96vh;
     display: flex;
@@ -27,7 +27,7 @@ body {
 }
 
 .main_div2 {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 400px;
     height: 550px;
     display: flex;
@@ -68,7 +68,7 @@ body {
 }
 
 .head_div {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 350px;
     height: 95px;
     display: flex;
@@ -92,9 +92,14 @@ body {
     font-weight: 900;
 }
 
+/* .bar_menu {
+    border: 2px solid white;
+    width: 30px;
+    height: 30px;
+} */
 
 .demo_div {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 120px;
     height: 90px;
     display: flex;
@@ -128,8 +133,22 @@ body {
 }
 
 
+.menu_bot_div {
+    /* border: 2px solid white; */
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar_menu {
+
+    font-size: 50px;
+    color: white;
+}
+
 .input_div {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 370px;
     height: 50px;
     display: flex;
@@ -174,12 +193,13 @@ input::-webkit-inner-spin-button {
 
 
 .check_div {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 370px;
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: none;
 }
 
 .check_div>button {
@@ -202,7 +222,7 @@ input::-webkit-inner-spin-button {
 }
 
 .accuracy_div {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 350px;
     height: 90px;
     display: flex;
@@ -210,12 +230,23 @@ input::-webkit-inner-spin-button {
     align-items: center;
 }
 
+
 .correct {
     color: green;
 }
 
+.tryAgain {
+    color: red;
+}
+
+.yourStatus {
+    color: gray;
+}
+
+
+
 .scores_div {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 350px;
     height: 90px;
     display: flex;
@@ -248,4 +279,3 @@ input::-webkit-inner-spin-button {
 .score_child>h3 {
     font-size: 12px;
 }
-

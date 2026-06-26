@@ -13,8 +13,9 @@ function numGenerator() {
 numGenerator();
 
 let highScore = document.getElementById("highScore");
-score = +highScore.innerText;
-
+// score = +highScore.innerText;
+let score = +(localStorage.getItem("highScore") || 0);
+highScore.innerHTML = score
 
 let currentScore = document.getElementById("currentScore")
 current = currentScore.innerText;
@@ -23,10 +24,18 @@ current = currentScore.innerText;
 
 
 let userAttempts = document.getElementById("attempts")
-attempts = userAttempts.innerText;
+// let localAttemps = +(localStorage.getItem("attemptsLeft"))
+// let attempts = +(localStorage.getItem("attempts") || 10);
+// attempts = userAttempts.innerText;
+let attempts = +(localStorage.getItem("attempts") || 10);
 
+userAttempts.innerHTML = attempts;
 
 console.log(botNum);
+
+
+let guessText = document.getElementById("correct");
+guessText.className = "yourStatus";
 // console.log(botNum2);
 
 
@@ -39,23 +48,27 @@ function checkGuess() {
     }
     else {
         attempts--;
-        userAttempts.innerHTML = attempts
+        userAttempts.innerHTML = attempts;
         // demo.innerHTML = botNum;
-
+        // localStorage.setItem("attempts", attempts);
+        localStorage.setItem("attempts", attempts);
 
         if (userValue == botNum) {
             demo.innerHTML = botNum;
             alert("you win");
             numGenerator()
             console.log(botNum);
+            guessText.className = "correct"
 
-
+            guessText.innerHTML = "Correct"
             current++;
             currentScore.innerHTML = current;
             // numGenerator()
             if (current > score) {
-                score++;
+                score = current;
                 highScore.innerHTML = score
+                localStorage.setItem("highScore", score);
+
             }
 
 
@@ -63,9 +76,12 @@ function checkGuess() {
         } else {
 
             alert("try again")
+            guessText.innerHTML = "Try Again"
+            guessText.className = "tryAgain"
 
             current--;
             currentScore.innerHTML = current
+
         }
 
 
@@ -77,7 +93,7 @@ function checkGuess() {
 
 function playagain() {
 
-    
+
     numGenerator();
     console.log(botNum);
 
@@ -88,6 +104,9 @@ function playagain() {
     userAttempts.innerHTML = attempts;
 
 }
+
+
+
 
 
 

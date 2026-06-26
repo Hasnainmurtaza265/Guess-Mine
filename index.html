@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./media768.css">
     <link rel="stylesheet" href="./media480.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="./app.js"></script>
 </head>
 
@@ -16,16 +19,29 @@
     <div class="main_div">
         <div class="main_div2">
             <div class="child_div head_div">
+
+
                 <h1>Guess The Number</h1>
                 <p>Try to guess the number between 1 and 10</p>
             </div>
-            <div class="child_div demo_div">
-                <h1>BOT Guess</h1>
-                <div class="demo_child">
-                    <h2>Guess :</h2>
-                    <h2 id="demo"></h2>
+
+
+            <div class="menu_bot_div">
+                <div class="child_div demo_div">
+                    <i class="bar_menu fa-solid fa-bars"></i>
                 </div>
+
+
+                <div class="child_div demo_div">
+                    <h1>BOT Guess</h1>
+                    <div class="demo_child">
+                        <h2>Guess :</h2>
+                        <h2 id="demo"></h2>
+                    </div>
+                </div>
+
             </div>
+
             <div class="child_div input_div">
                 <input type="number" name="" id="userInput" placeholder="Enter your guess">
             </div>
@@ -34,7 +50,7 @@
                 <button class="play_again" onclick="playagain()">Play Again</button>
             </div>
             <div class="child_div accuracy_div">
-                <h1 class="correct">Correct Guess</h1>
+                <h1 id="correct" class="yourStatus correct tryAgain">Your Status</h1>
             </div>
             <div class="child_div scores_div">
                 <div class="score_child score_child_1">
